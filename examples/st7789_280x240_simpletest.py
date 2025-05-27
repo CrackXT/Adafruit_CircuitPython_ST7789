@@ -39,7 +39,17 @@ tft_cs = board.D20
 tft_dc = board.D21
 backlight = board.D6
 display_bus = FourWire(spi, command=tft_dc, chip_select=tft_cs, reset=board.D5)
-display = ST7789(display_bus, width=width, height=height, colstart=0, rowstart=20, rotation=rotation, backlight_pin=backlight, bgr=True, invert=True)
+display = ST7789(
+    display_bus,
+    width=width,
+    height=height,
+    colstart=0,
+    rowstart=20,
+    rotation=rotation,
+    backlight_pin=backlight,
+    bgr=True,
+    invert=True,
+)
 
 # set the backlight
 # minimum value 0.001 (0.000 would be off), maximum value 1.000

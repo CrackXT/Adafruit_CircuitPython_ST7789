@@ -12,6 +12,7 @@ import displayio
 import terminalio
 from adafruit_display_text import label
 from fourwire import FourWire
+
 from adafruit_st7789 import ST7789
 
 # set the display rotation

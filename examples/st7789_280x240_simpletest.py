@@ -17,7 +17,7 @@ from adafruit_st7789 import ST7789
 
 # set the display rotation
 rotation = 90
-if rotation not in (0, 90, 180, 270):
+if rotation not in {0, 90, 180, 270}:
     raise ValueError("The value of rotation must be one of: 0, 90, 180, 270")
 
 # Display settings depending on the selected rotation

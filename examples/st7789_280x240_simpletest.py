@@ -23,15 +23,15 @@ if rotation not in (0, 90, 180, 270):
 # Display settings depending on the selected rotation
 # first value default setting for 1.69" with 0° and 180° rotation
 # second value default setting for 1.69" with 90° and 270° rotation
-width = 240 if rotation in (0, 180) else 280
-height = 280 if rotation in (0, 180) else 240
-color_bitmap_x = 240 if rotation in (0, 180) else 280
-color_bitmap_y = 280 if rotation in (0, 180) else 240
-inner_bitmap_x = 200 if rotation in (0, 180) else 240
-inner_bitmap_y = 240 if rotation in (0, 180) else 200
-scale = 2 if rotation in (0, 180) else 3
-x = 50 if rotation in (0, 180) else 37
-y = 140 if rotation in (0, 180) else 120
+width = 240 if rotation in {0, 180} else 280
+height = 280 if rotation in {0, 180} else 240
+color_bitmap_x = 240 if rotation in {0, 180} else 280
+color_bitmap_y = 280 if rotation in {0, 180} else 240
+inner_bitmap_x = 200 if rotation in {0, 180} else 240
+inner_bitmap_y = 240 if rotation in {0, 180} else 200
+scale = 2 if rotation in {0, 180} else 3
+x = 50 if rotation in {0, 180} else 37
+y = 140 if rotation in {0, 180} else 120
 
 # Release any resources currently in use for the displays
 displayio.release_displays()
